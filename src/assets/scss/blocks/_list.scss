@@ -1,0 +1,49 @@
+.list {
+    margin-bottom: $mb-mobile;
+
+    @include respond-to(small) {
+        margin-bottom: $mb-tablet;
+    }
+
+    @include respond-to(medium) {
+        margin-bottom: $mb-desktop;
+    }
+    
+    &__item {
+        font-size: $font-sm;
+        margin-bottom: $mb-mobile;
+
+        @include respond-to(medium) {
+            font-size: 18px;
+            margin-bottom: $mb-tablet;
+        }
+
+        @include respond-to(large) {
+            margin-bottom: $mb-desktop;
+            font-size: 20px;
+        }
+
+        &_d-flex {
+            display: flex;
+            align-items: flex-start;
+            
+
+            span {
+                width: 90%;
+            }
+        }
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        margin-top: 2px;
+        margin-right: 15px;//30
+
+        @include respond-to(large) {
+            margin-right: 30px;
+            width: 27px;
+            height: 27px;
+        }
+    }
+}

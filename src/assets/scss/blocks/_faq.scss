@@ -1,0 +1,47 @@
+.faq {
+    margin-bottom: 20px;
+
+    &__item {
+        margin-bottom: $mb-mobile;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include respond-to(medium) {
+            padding: 20px 35px;
+            margin-bottom: $mb-tablet;
+        }
+
+        @include respond-to(large) {
+            padding: 35px 50px;
+            margin-bottom: $mb-desktop;
+        }
+    }
+
+    &__subtitle {
+        width: 80%;
+
+        &_active {
+            margin-bottom: $mb-mobile;
+        }
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        transition: all 0.8s;
+        cursor: pointer;
+
+        &_active {
+            transform: rotate(135deg);
+        }
+    }
+
+    &__paragraph {
+        display: none;
+        font-size: $font-sm;
+        margin-bottom: $mb-mobile;
+        width: 100%;
+    }
+}
