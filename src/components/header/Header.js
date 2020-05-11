@@ -1,7 +1,7 @@
 import React from 'react';
 import {NAV_ITEMS} from "../../constatns";
 import Icon from "../Icons";
-import './_header.scss'
+import './_header.scss';
 
 function Header() {
   return (
