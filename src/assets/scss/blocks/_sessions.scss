@@ -1,0 +1,187 @@
+.sessions {
+    background-color: $white;
+
+    &__title {
+        @include respond-to(large) {
+            margin-bottom: 125px;
+        }
+    }
+
+    .list {
+        border-left: 2px solid  $grey;
+
+        &__item {
+            margin-bottom: $mb-mobile;
+            padding-left: 5px;
+
+            @include respond-to(small) {
+                margin-bottom: $mb-tablet;
+                padding-left: 10px;
+            }
+
+            @include respond-to(medium) {
+                margin-bottom: $mb-desktop;
+                padding-left: 15px;
+            }
+
+            @include respond-to(large) {
+                margin-bottom: 50px;
+                padding-left: 20px;
+            }
+        }
+
+        &__heading {
+            background-color: $grey;
+            border-radius: 12px;
+            padding: 10px 15px;
+            margin-bottom: $mb-mobile;
+            position: relative;
+
+            @include respond-to(small) {
+                display: flex;
+                align-items: center;
+                margin-bottom: $mb-tablet;
+            }
+
+            @include respond-to(medium) {
+                padding: 10px 25px;
+                margin-bottom: $mb-desktop;
+            }
+
+            &:before {
+                content: '';
+                border-left: 4px solid $black;
+                position: absolute;
+                height: 100%;
+                top: 0;
+                left: -8px;
+                border-radius: 26px;
+
+                @include respond-to(small) {
+                    left: -13px
+                }
+
+                @include respond-to(medium) {
+                    left: -18px
+                }
+
+                @include respond-to(medium) {
+                    padding-left: -23px;
+                }
+            }
+        }
+
+        &__title {
+
+            @include respond-to(small) {
+                width: calc(30% - 5px);
+            }
+        }
+
+        &__info {
+            display: none;
+
+            @include respond-to(small) {
+                display: flex;
+                width: 65%;
+                justify-content: space-between;
+            }
+            
+            &_mobile {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                font-size: $font-sm;
+                margin-bottom: $mb-mobile;
+                margin: 0 auto;
+
+                @include respond-to(small) {
+                    display: none;
+                }
+            }
+        }
+
+        &__details {
+            margin-bottom: $mb-mobile;
+            display: flex;
+            align-items: center;
+
+            @include respond-to(small) {
+                margin-bottom: 0;
+            }
+
+            @include respond-to(medium) {
+                font-size: 19px;
+            }
+
+            &_cursor {
+                cursor: pointer;
+            }
+        }
+
+        &__icon {
+            width: 14px;
+            height: 14px;
+
+            @include respond-to(medium) {
+                width: 22px;
+                height: 22px;
+                margin-top: 0;
+            }
+        }
+
+        &__description {
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+
+            @include respond-to(small) {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+
+        &__img {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: $mb-mobile;
+
+            @include respond-to(small) {
+                width: 30%;
+                justify-content: flex-start;
+                margin-bottom: 0;
+            }
+
+            @include respond-to(medium) {
+                margin-top: 10px;
+            }
+        
+            img {
+                display: block;
+                max-width: 85px;
+                
+                @include respond-to(small) {
+                    margin-left: 15px;
+                }
+
+                @include respond-to(medium) {
+                    margin-left: 25px;
+                }
+            }
+        }
+
+        &__paragraph {
+            font-size: $font-sm;
+            margin-bottom: $mb-mobile;
+
+            @include respond-to(small) {
+                width: 70%;
+            }
+
+            @include respond-to(medium) {
+                font-size: 16px;
+                line-height: 2.13;
+            }
+        }
+    }
+}

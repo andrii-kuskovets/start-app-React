@@ -1,0 +1,143 @@
+.tabs {
+    &__list-desktop {
+        display: none;
+
+        @include respond-to(medium) {
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid $black2;
+            border-radius: 16px;
+            width: 91%;
+            margin: 0 auto;
+            margin-bottom: $mb-tablet;
+        }
+
+        @include respond-to(large) {
+            margin-bottom: 85px;
+        }
+
+        .tabs__name {
+            @include respond-to(medium) {
+                width: 100%;
+                border: none;
+                margin-bottom: 0;
+                border-radius: 0;
+                border-left: 1px solid $black2;
+                display: inline-flex;
+                justify-content: center;
+                    
+                &:first-child {
+                    border-left: none;
+                    border-radius: 14px 0 0 14px;
+                }
+
+                &:last-child {
+                    border-radius: 0 14px 14px 0;
+                }
+                
+            }
+
+            &_active {
+                background-color: $black2;
+                color: $white;
+            }
+        }
+    }
+
+    
+    &__items {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        
+        @include respond-to(large) {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    img {
+        display: none;
+
+        @include respond-to(medium) {
+            display: block;
+            width: 25%;
+        }
+
+        @include respond-to(large) {
+            width: 30%;
+        }
+    }
+
+    &__name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px; //18
+        font-weight: 400;
+        text-align: center;
+        color: $black2;
+        padding: 10px 15px; //18
+        border: 1px solid $black2;
+        border-radius: 16px;
+        margin-bottom: $mb-mobile;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        @include respond-to(medium) {
+            display: none;
+        }
+
+        &:hover {
+            background-color: $black2;
+            color: $white;
+        }
+
+        &:hover .tabs__icon {
+            stroke: $white;
+        }
+    }
+
+    &__description {
+        display: none;
+        margin-bottom: $mb-mobile;
+
+        &_active {
+            @include respond-to(medium) {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+        } 
+
+    }
+
+    &__paragraph {
+        font-size: $font-sm;
+        font-weight: 400;
+
+        @include respond-to(medium) {
+            width: 70%;
+            font-size: 16px;
+            line-height: 2.4;
+        }
+
+        @include respond-to(large) {
+            font-size: 20px;
+            width: 67%;
+        }
+    }
+
+    &__icon {
+        width: 10px;
+        height: 10px;
+        transform: rotate(90deg);
+        transition: all 0.5s;
+        stroke: $black;
+
+        &_active {
+            transform: rotate(-90deg);
+            stroke: $white;
+        }
+    }
+}

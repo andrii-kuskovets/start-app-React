@@ -1,0 +1,10 @@
+.projects {
+    background-color: $white;
+    padding-top: 30px;
+
+    &__title {
+        @include respond-to(large) {
+            margin-bottom: 117px;
+        }
+    }
+}
