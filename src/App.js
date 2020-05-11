@@ -2,7 +2,8 @@ import React from 'react';
 import Header from "./components/header/Header";
 import Promo from "./components/promo/Promo";
 import About from "./components/about/About";
-import './assets/scss/style.scss'
+import Experience from "./components/experience/Experience";
+import './assets/scss/style.scss';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Header />
         <Promo />
         <About />
+        <Experience />
       </div>
   );
 }
