@@ -1,3 +1,6 @@
+@import '../../assets/scss/base/_variables.scss';
+@import '../../assets/scss/base/_mixins.scss';
+
 .mailing {
     background-color: $black;
     color: $white;
@@ -18,7 +21,7 @@
 
         &:after {
             content: '';
-            background: url(../../img/Union3.png) center (top / cover) no-repeat;
+            background: url(../../assets/img/Union3.png) center (top / cover) no-repeat;
             position: absolute;
             bottom: 0;
             width: 100%;

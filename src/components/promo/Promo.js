@@ -1,4 +1,5 @@
 import React from 'react';
+import IMG from '../../assets/img/promo.png';
 import './_promo.scss';
 
 function Promo() {
@@ -27,7 +28,7 @@ function Promo() {
                             <span className="section__subtitle">Product Factory</span>
                             <span className="section__back-title">UI / UX</span>
                         </h1>
-                        <img src={require("../../assets/img/promo.png")} alt='factory'></img>
+                        <img src={IMG} alt='factory'></img>
                     </div>
                 </div>
             </div>
