@@ -1,5 +1,5 @@
 import React from 'react';
-import {SESSIONS_ITEMS} from "../../constatns";
+import {SESSIONS} from "../../constatns";
 import Icon from "../Icons";
 import './_sessions.scss';
 
@@ -14,7 +14,7 @@ function Sessions() {
                 </h2>
                 </div>
                 <ul className="sessions__list list">
-                    {SESSIONS_ITEMS.map(item => (
+                    {SESSIONS.map(item => (
                         <li key={item.title} className="list__item">
                             <div className="list__heading">
                             <h4 className="list__title">{item.title} Session</h4>

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {FAQ_ITEMS} from "../../constatns";
 import Icon from "../Icons";
 import './_faq.scss';
 
 function FAQ() {
+    const [active, setActiveBlock] = useState("");
+    
     return (
         <section className="faq section" id="faq">
             <div className="container">
@@ -14,12 +16,14 @@ function FAQ() {
                 </h2>
                 </div>
                 <div className="faq__items">
-                    {FAQ_ITEMS.map(item => (
-                        <div key={item.title} className="faq__item br-xs">
-                            <h3 className="faq__subtitle">{item.title}</h3>
-                            <Icon className="faq__icon" name="plus" />
-                            <p className="faq__paragraph">{item.answer}</p>
-                    </div>
+                    {FAQ_ITEMS.map((item, i) => (
+                        <div key={i} className={`faq__item br-xs ${active === i}`} onClick={() => {
+                            setActiveBlock(active === i ? "" : i)
+                        }}>
+                            <h3 className="faq__subtitle">{item.question}</h3>
+                            <Icon className={active === i ? 'faq__icon faq__icon_active' : 'faq__icon' } name="plus" />
+                            <p className={active === i ? 'faq__paragraph faq__paragraph_active' : 'faq__paragraph' }>{item.answer}</p>
+                        </div>
                     ))}
                 </div>
             </div>

@@ -15,7 +15,7 @@ function Mailing() {
                     Please enter your email address to receive course titles, the topics will be emailed to you.
                     </p>
                     <form className="form">
-                    <input className="form__input" type="text" name="mail" placeholder="Email" />
+                        <input className="form__input" type="email" name="mail" placeholder="Email" />
                     </form>
                     <span className="mailing__status">Your email has been successfully registered, headlines will be sent to you soon.</span>
                 </div>
