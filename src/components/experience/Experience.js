@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from "../Icons";
+import IMG from '../../assets/img/banner.png';
 import './_experience.scss';
 
 function Experience() {
@@ -13,7 +14,7 @@ function Experience() {
                     <span className="section__back-title section__back-title_small">Experience</span>
                     </h2>
                 </div>
-                <img className="experience__img" src={require("../../assets/img/banner.png")} alt="banner" />
+                <img className="experience__img" src={IMG} alt="banner" />
                 <div className="experience__tabs tabs">
                     <ul className="tabs__list-desktop js_tab-list-desktop">
                     <li className="tabs__name tabs__name_active"><span>After attending the course</span></li>
@@ -27,7 +28,7 @@ function Experience() {
                             <Icon className="tabs__icon" name="arrow" />
                         </div>
                         <div className="tabs__description tabs__description_active js_tabs__description-mobile">
-                        <img src={require("../../assets/img/banner.png")} alt="banner" />
+                        <img src={IMG} alt="banner" />
                         <p className="tabs__paragraph">
                             This course has been attempted by zero people who are eager to learn product design, 
                             especially user experience and user interface, so it is not a prerequisite, but due 
@@ -44,7 +45,7 @@ function Experience() {
                             <Icon className="tabs__icon" name="arrow" />
                         </div>
                         <div className="tabs__description js_tabs__description-mobile">
-                        <img src={require("../../assets/img/banner.png")} alt="banner" />
+                        <img src={IMG} alt="banner" />
                         <p className="tabs__paragraph">
                             Obviously, the ability to use tools like Adobe Photoshop and Adobe Illustrator as well 
                             as Microsoft Word, Excel tools, and of course a lot of enthusiasm and energy, 
@@ -57,7 +58,7 @@ function Experience() {
                             <Icon className="tabs__icon" name="arrow" />
                         </div>
                         <div className="tabs__description js_tabs__description-mobile">
-                        <img src={require("../../assets/img/banner.png")} alt="banner" />
+                        <img src={IMG} alt="banner" />
                         <p className="tabs__paragraph">
                             This course has been attempted by zero people who are eager to learn product design, 
                             especially user experience and user interface, so it is not a prerequisite, but due 

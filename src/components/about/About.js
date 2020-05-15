@@ -1,5 +1,7 @@
 import React from 'react';
 import Icon from "../Icons";
+import IMG from '../../assets/img/card.png';
+import IMG_GIF from '../../assets/img/Adweek.gif';
 import './_about.scss';
 
 function About() {
@@ -9,8 +11,8 @@ function About() {
                 <div className="section__heading about__content">
                 <div className="about__imgs">
                     <div className="about__img">
-                        <img src={require("../../assets/img/card.png")} alt="card" />
-                        <img src={require("../../assets/img/Adweek.gif")} alt="gif" className="about__back-img" />
+                        <img src={IMG} alt="card" />
+                        <img src={IMG_GIF} alt="gif" className="about__back-img" />
                     </div>
                 </div>
                 <h2 className="section__title about__title">
