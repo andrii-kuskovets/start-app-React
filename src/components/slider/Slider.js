@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import Icon from "../Icons";
-import {SLIDER_DESCRIPTIONS} from '../../constatns';
+import { SLIDER_DESCRIPTIONS } from '../../constatns';
 import IMG1 from "../../assets/img/Tian.jpg";
 import IMG2 from "../../assets/img/katro.jpg";
 import IMG3 from "../../assets/img/Melodist.png";
@@ -27,44 +27,29 @@ const SamplePrevArrow = ({ onClick }) => (
     </div>
 );
 
-export default class AsNavFor extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            nav1: null,
-            nav2: null
-        };
-    }
+function AsNavFor() {
+    const [nav1, setNav1] = useState();
+    const [nav2, setNav2] = useState();
+    const [activeSlide, setActiveSlide] = useState(0);
 
-    componentDidMount() {
-        this.setState({
-            nav1: this.slider1,
-            nav2: this.slider2,
-            activeSlide: 0
-        });
-    }
+    const settings = {
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />
+    };
 
-    
+    const settings1 = {
+        arrows: false,
+        slidesToShow: 1,
+        afterChange: current => setActiveSlide(current)
+    };
 
-    render() {
-        const settings = {
-            nextArrow: <SampleNextArrow />,
-            prevArrow: <SamplePrevArrow />
-        };
-
-        const settings1 = {
-            arrows: false,
-            slidesToShow: 1,
-            afterChange: current => this.setState({ activeSlide: current })
-        }
-
-        return (
-            <div className='slider__wrapper'>
+    return (
+        <div className='slider__wrapper'>
             <div className="slider__descriptions">
-                <Slider 
-                asNavFor={this.state.nav2} 
-                ref={slider => (this.slider1 = slider)}
-                {...settings1}
+                <Slider
+                    asNavFor={nav2}
+                    ref={slider1 => setNav1(slider1)}
+                    {...settings1}
                 >
                     {SLIDER_DESCRIPTIONS.map(item => (
                         <div key={item.title} className="slider__description">
@@ -91,12 +76,12 @@ export default class AsNavFor extends Component {
                         </div>
                     ))}
                 </Slider>
-                <span className="slider__value">{this.state.activeSlide + 1} / 6</span>
+                <span className="slider__value">{activeSlide + 1} / 6</span>
             </div>
             <div className="slider__imgs">
-                <Slider 
-                    asNavFor={this.state.nav1} 
-                    ref={slider => (this.slider2 = slider)}
+                <Slider
+                    asNavFor={nav1}
+                    ref={slider2 => setNav2(slider2)}
                     slidesToShow={1}
                     swipeToSlide={true}
                     focusOnSelect={true}
@@ -122,7 +107,8 @@ export default class AsNavFor extends Component {
                     </div>
                 </Slider>
             </div>
-        </div>    
-        );
-    }
+        </div>
+    );
 }
+
+export default AsNavFor
