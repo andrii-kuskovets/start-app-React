@@ -10,27 +10,22 @@ import './_slider.scss';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function SampleNextArrow({onClick}) {
-    return (
-        <div className="slider__buttons">
-            <button className="btn btn__arrow btn_next" onClick={onClick}> 
-                <Icon className="btn__icon" name="arrow" />
-            </button>
-        </div>
-        
-    );
-}
+const SampleNextArrow = ({ onClick }) => (
+    <div className="slider__buttons">
+        <button className="btn btn__arrow btn_next" onClick={onClick}>
+            <Icon className="btn__icon" name="arrow" />
+        </button>
+    </div>
+);
 
-function SamplePrevArrow({onClick}) {
-    return (
-        <div className="slider__buttons">
-            <button className="btn btn__arrow btn__prev" onClick={onClick}>
-                <Icon className="btn__icon" name="arrow" />
-            </button>
-        </div>
-        
-    );
-}
+
+const SamplePrevArrow = ({ onClick }) => (
+    <div className="slider__buttons">
+        <button className="btn btn__arrow btn__prev" onClick={onClick}>
+            <Icon className="btn__icon" name="arrow" />
+        </button>
+    </div>
+);
 
 export default class AsNavFor extends Component {
     constructor(props) {
