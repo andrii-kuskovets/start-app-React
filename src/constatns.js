@@ -212,3 +212,30 @@ export const TABS = [
     description: 'This course has been attempted by zero people who are eager to learn product design, especially user experience and user interface, so it is not a prerequisite, but due to the limited courses tools like Adobe Photoshop and Adobe Illustrator as well as Microsoft Word, Excel tools, and of course a lot of enthusiasm and energy'
   }
 ] 
+
+export const SLIDER_DESCRIPTIONS = [
+  {
+    title: 'Design To Do List app',
+    paragraph: 'The previous student design project was the To Do List application product factory, The counter examples are the result of the efforts of the students and their teamwork in the first course.'
+  },
+  {
+    title: 'Design To Do List app',
+    paragraph: 'The counter examples are the result of the efforts of the students and their teamwork in the first course.'
+  },
+  {
+    title: 'Design To Do List app',
+    paragraph: 'The previous student design project was the To Do List application product factory, The counter examples are the result of the efforts of the students and their teamwork in the first course.'
+  },
+  {
+    title: 'Design To Do List app',
+    paragraph: 'The previous student design project was the To Do List.'
+  },
+  {
+    title: 'Design To Do List app',
+    paragraph: 'The previous student design project was the To Do List application product factory, The counter examples are the result of the efforts of the students and their teamwork in the first course.'
+  },
+  {
+    title: 'Design To Do List app',
+    paragraph: 'The previous student design project was the To Do List application product factory, The counter examples are the result of the efforts of the students and their teamwork in the first course.'
+  }
+]

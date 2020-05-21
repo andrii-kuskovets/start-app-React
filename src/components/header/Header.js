@@ -5,6 +5,7 @@ import './_header.scss';
 
 function Header() {
   const [active, setActiveMenu] = useState(false);
+
   return (
       <header className="header">
         <div className="container">
@@ -19,7 +20,7 @@ function Header() {
                 <ul className="menu__list">
                   {NAV_ITEMS.map(item => (
                       <li key={item.title} className="menu__element">
-                        <a className="menu__link" href={`#${item.link}`}>{item.title}</a>
+                        <a className="menu__link" href={`#${item.link}`} onClick={() => setActiveMenu(!active)}>{item.title}</a>
                       </li>
                   ))}
                 </ul>

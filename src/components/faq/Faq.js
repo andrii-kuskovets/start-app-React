@@ -4,7 +4,7 @@ import Icon from "../Icons";
 import './_faq.scss';
 
 function FAQ() {
-    const [active, setActiveBlock] = useState("");
+    const [active, setActiveBlock] = useState(null);
     
     return (
         <section className="faq section" id="faq">
@@ -17,8 +17,8 @@ function FAQ() {
                 </div>
                 <div className="faq__items">
                     {FAQ_ITEMS.map((item, i) => (
-                        <div key={i} className={`faq__item br-xs ${active === i}`} onClick={() => {
-                            setActiveBlock(active === i ? "" : i)
+                        <div key={i} className={`faq__item br-xs ${active}`} onClick={() => {
+                            setActiveBlock(active === i ? null : i)
                         }}>
                             <h3 className="faq__subtitle">{item.question}</h3>
                             <Icon className={active === i ? 'faq__icon faq__icon_active' : 'faq__icon' } name="plus" />

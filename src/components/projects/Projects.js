@@ -15,10 +15,8 @@ function Projects() {
                 <div className="projects__slider">
                     <div className="slider">
                         <Sliders />
-                    
                     </div>
                 </div>
-                <span className="slider__value">1 / 6</span>
             </div>
         </section>
     );

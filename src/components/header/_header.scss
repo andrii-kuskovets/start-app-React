@@ -3,13 +3,31 @@
 
 .header {
     background-color: $black;
-    padding: 25px 0;
+    position: relative;
+    height: 124px;
+    z-index: 1;
+
+    @include respond-to(medium) {
+        padding: 25px 0;
+    }
 
     &__wrapper {
+        position: fixed;
+        width: 100%;
         display: flex;
+        left: 0;
+        padding: 25px 10px;
         align-items: center;
+        background-color: rgba($black, .8);
+
+        @include respond-to(small) {
+            width: 100%;
+            padding: 25px 20px;
+        }
 
         @include respond-to(medium) {
+            padding: 0;
+            position: relative;
             justify-content: space-between;
         }
     }

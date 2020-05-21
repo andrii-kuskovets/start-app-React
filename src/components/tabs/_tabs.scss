@@ -1,3 +1,6 @@
+@import '../../assets/scss/base/_variables.scss';
+@import '../../assets/scss/base/_mixins.scss';
+
 .tabs {
     &__list-desktop {
         display: none;
