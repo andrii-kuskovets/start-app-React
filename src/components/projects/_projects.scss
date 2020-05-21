@@ -1,0 +1,13 @@
+@import '../../assets/scss/base/_variables.scss';
+@import '../../assets/scss/base/_mixins.scss';
+
+.projects {
+    background-color: $white;
+    padding-top: 30px;
+
+    &__title {
+        @include respond-to(large) {
+            margin-bottom: 117px;
+        }
+    }
+}

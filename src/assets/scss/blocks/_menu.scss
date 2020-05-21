@@ -1,0 +1,126 @@
+.menu {
+    position: relative;
+
+    &__nav {
+        background-color: rgba($black, .8);
+        width: 100%;
+        height: 100vh;
+        margin-top: 68px;
+        position: fixed;
+        left: 0;
+        transform: translateX(-100%);
+        transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition-delay: .1s;
+        z-index: 1;
+
+        @include respond-to(medium) {
+            background-color: transparent;
+            position: relative;
+            margin-top: 0;
+            transform: translateX(0);
+            height: 100%;
+        }
+        
+        &_active {
+            transform: translateX(0);
+        }
+
+        a {
+            padding: 20px;
+            font-weight: 400;
+            font-size: 20px;
+            color: $white;
+            text-transform: uppercase;
+            text-decoration: none;
+            z-index: 1;
+
+            @include respond-to(medium) {
+                padding: 0;
+                text-transform: none;
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__list {
+        @include respond-to(medium) {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    &__element {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 8px;
+        transform: perspective(1px) translateZ(0);
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 100%;
+            bottom: 0;
+            z-index: -1;
+            background-color: $white;
+            height: 2px;
+            transition-property: right;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+        }
+    
+        &:hover,
+        &:focus,
+        &:active {
+            
+            &:before {
+                right: 0;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+    }
+}
+
+.hamburger {
+    display: block;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    width: 22px;
+    cursor: pointer;
+
+    span {
+        display: block;
+        border-bottom: 4px solid $white;
+    }
+
+    span+span {
+        margin-top: 4px;
+    }
+
+    &_active {
+        span {
+        
+            &:nth-child(1) {
+                transform: translateY(2px) rotate(-45deg);
+            }
+
+            &:nth-child(2) {
+                display: none;
+            }
+
+            &:nth-child(3) {
+                transform: translateY(-6px) rotate(45deg);
+            }
+            
+        }
+    }
+
+    @include respond-to(medium) {
+        display: none;
+    }
+}

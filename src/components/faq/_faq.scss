@@ -1,0 +1,55 @@
+@import '../../assets/scss/base/_variables.scss';
+@import '../../assets/scss/base/_mixins.scss';
+
+.faq {
+    margin-bottom: 20px;
+
+    &__item {
+        margin-bottom: $mb-mobile;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        cursor: pointer;
+
+        @include respond-to(medium) {
+            padding: 20px 35px;
+            margin-bottom: $mb-tablet;
+        }
+
+        @include respond-to(large) {
+            padding: 35px 50px;
+            margin-bottom: $mb-desktop;
+        }
+    }
+
+    &__subtitle {
+        width: 80%;
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        transition: all 0.4s;
+
+        &_active {
+            transform: rotate(45deg);
+        }
+    }
+
+    &__paragraph {
+        display: none;
+        font-size: $font-sm;
+        margin-top: $mb-mobile;
+        margin-bottom: $mb-mobile;
+        width: 100%;
+
+        @include respond-to(medium) {
+            font-size: 18px;
+        }
+        
+        &_active {
+            display: block;
+        }
+    }
+}

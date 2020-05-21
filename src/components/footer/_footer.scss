@@ -1,0 +1,52 @@
+@import '../../assets/scss/base/_variables.scss';
+@import '../../assets/scss/base/_mixins.scss';
+
+.footer {
+    background-color: $white;
+    padding: 25px 0;
+
+    @include respond-to(medium) {
+        padding: 50px 0;
+    }
+
+    @include respond-to(large) {
+        padding: 100px 0;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__phone {
+        width: 33%;
+        order: 3;
+        font-size: 13px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        span {
+            margin-right: 5px;
+        }
+        
+        a {
+            color: $black;
+            text-decoration: none;
+            margin-right: 5px;
+        }
+
+        @include respond-to(medium) {
+            font-size: 20px;
+        }
+    }
+
+    .logo {
+        width: 33%;
+    }
+
+    .social-networks {
+        width: 33%;
+    }
+}
