@@ -1,5 +1,5 @@
 import React from 'react';
-import {MASTERS_ITEMS} from "../../constatns";
+import {MASTERS_LIST} from "../../constatns";
 import Icon from "../Icons";
 import './_masters.scss';
 
@@ -15,7 +15,7 @@ function Masters() {
                     </h2>
                 </div>
                 <ul className="masters__items">
-                    {MASTERS_ITEMS.map(item => (
+                    {MASTERS_LIST.map(item => (
                         <li key={item.title} className="masters__item">
                             <div className="masters__photo">
                                 <img src={item.src} alt="master" />

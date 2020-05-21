@@ -10,6 +10,7 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+        cursor: pointer;
 
         @include respond-to(medium) {
             padding: 20px 35px;
@@ -24,27 +25,31 @@
 
     &__subtitle {
         width: 80%;
-
-        &_active {
-            margin-bottom: $mb-mobile;
-        }
     }
 
     &__icon {
         width: 20px;
         height: 20px;
-        transition: all 0.8s;
-        cursor: pointer;
+        transition: all 0.4s;
 
         &_active {
-            transform: rotate(135deg);
+            transform: rotate(45deg);
         }
     }
 
     &__paragraph {
         display: none;
         font-size: $font-sm;
+        margin-top: $mb-mobile;
         margin-bottom: $mb-mobile;
         width: 100%;
+
+        @include respond-to(medium) {
+            font-size: 18px;
+        }
+        
+        &_active {
+            display: block;
+        }
     }
 }

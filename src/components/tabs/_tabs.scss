@@ -1,3 +1,6 @@
+@import '../../assets/scss/base/_variables.scss';
+@import '../../assets/scss/base/_mixins.scss';
+
 .tabs {
     &__list-desktop {
         display: none;
@@ -96,6 +99,11 @@
         &:hover .tabs__icon {
             stroke: $white;
         }
+
+        &_active {
+            background-color: $black2;
+            color: $white;
+        }
     }
 
     &__description {
@@ -103,6 +111,8 @@
         margin-bottom: $mb-mobile;
 
         &_active {
+            display: flex;
+            
             @include respond-to(medium) {
                 display: flex;
                 justify-content: space-between;

@@ -40,7 +40,7 @@ export const NAV_ITEMS = [
   },
 ]
 
-export const SESSIONS_ITEMS = [
+export const SESSIONS = [
   {
     title: 'First',
     src: [
@@ -117,7 +117,7 @@ export const SESSIONS_ITEMS = [
   }
 ]
 
-export const MASTERS_ITEMS = [
+export const MASTERS_LIST = [
   {
     src: MASTER3,
     title: 'Shervin Mashayekh',
@@ -172,23 +172,70 @@ export const MASTERS_ITEMS = [
 
 export const FAQ_ITEMS = [
   {
-    title: 'Does this course need any special requirements?',
+    question: 'Does this course need any special requirements?',
     answer: 'In the first session, we will consider design thinking and its understanding different models of design thinking and the design process, and we will better remember this process with various examples.We will also discuss problem solving techniques together and understand the concept of user experience and usability.'
   },
   {
-    title: 'Who are the audiences of the product design period of the product factory?',
+    
+    question: 'Who are the audiences of the product design period of the product factory?',
     answer: 'We will also discuss problem solving techniques together and understand the concept of user experience and usability.'
   },
   {
-    title: 'Is it possible to pay by installments?',
+    question: 'Is it possible to pay by installments?',
     answer: 'We will also discuss problem solving techniques together and understand the concept of user experience and usability. We will also discuss problem solving techniques together and understand the concept of user experience and usability.'
   },
   {
-    title: 'Can I start an internship after I finish the course?',
+    question: 'Can I start an internship after I finish the course?',
     answer: 'In the first session, we will consider design thinking and its understanding as well as different models of design thinking and the design process, and we will better remember this process with various examples.'
   },
   {
-    title: 'What should I do after I finish the course?',
+    question: 'What should I do after I finish the course?',
     answer: 'We will also discuss problem solving techniques together and understand the concept of user experience and usability.'
+  }
+]
+
+export const TABS = [
+  {
+    id: 1,
+    title: 'After attending the course',
+    description: 'This course has been attempted by zero people who are eager to learn product design, especially user experience and user interface, so it is not a prerequisite, but due to the limited capacity of the priority course with early enrolled people, others can participate in future courses..Obviously, the ability to use tools like Adobe Photoshop and Adobe Illustrator as well as Microsoft Word, Excel tools, and of course a lot of enthusiasm and energy '
+  },
+
+  {
+    id: 2,
+    title: 'During the period',
+    description: 'Obviously, the ability to use tools like Adobe Photoshop and Adobe Illustrator as well as Microsoft Word, Excel tools, and of course a lot of enthusiasm and energy'
+  },
+  {
+    id: 3,
+    title: 'Before attending the course',
+    description: 'This course has been attempted by zero people who are eager to learn product design, especially user experience and user interface, so it is not a prerequisite, but due to the limited courses tools like Adobe Photoshop and Adobe Illustrator as well as Microsoft Word, Excel tools, and of course a lot of enthusiasm and energy'
+  }
+] 
+
+export const SLIDER_DESCRIPTIONS = [
+  {
+    title: 'Design To Do List app',
+    paragraph: 'The previous student design project was the To Do List application product factory, The counter examples are the result of the efforts of the students and their teamwork in the first course.'
+  },
+  {
+    title: 'Design To Do List app',
+    paragraph: 'The counter examples are the result of the efforts of the students and their teamwork in the first course.'
+  },
+  {
+    title: 'Design To Do List app',
+    paragraph: 'The previous student design project was the To Do List application product factory, The counter examples are the result of the efforts of the students and their teamwork in the first course.'
+  },
+  {
+    title: 'Design To Do List app',
+    paragraph: 'The previous student design project was the To Do List.'
+  },
+  {
+    title: 'Design To Do List app',
+    paragraph: 'The previous student design project was the To Do List application product factory, The counter examples are the result of the efforts of the students and their teamwork in the first course.'
+  },
+  {
+    title: 'Design To Do List app',
+    paragraph: 'The previous student design project was the To Do List application product factory, The counter examples are the result of the efforts of the students and their teamwork in the first course.'
   }
 ]
